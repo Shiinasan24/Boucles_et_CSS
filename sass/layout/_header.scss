@@ -1,1 +1,45 @@
+header {
+    background-color: bisque;
+    border-left: solid 2px black;
+    border-right: solid 2px black;
+    border-bottom: solid 2px black;
+    display: flex;
+    justify-content: center;
+    gap: 15vw;
+    padding: 0 0 1vh;
+    height: 20vh;
+    animation: headerInFromTop 1.5s forwards;
+}
 
+#leftHeader {
+    background-color: rgb(3, 0, 180);
+    width: 20%;
+    height: 100%;
+    border-left: solid 2px white;
+    border-right: solid 2px white;
+    border-bottom: solid 2px white;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+}
+
+.centerHeader {
+    background-color: rgb(3, 0, 180);
+    width: 20vw;
+    height: 100%;
+    border-left: solid 2px white;
+    border-right: solid 2px white;
+    border-bottom: solid 2px white;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+}
+
+#rightHeader {
+    background-color: rgb(3, 0, 180);
+    width: 20vw;
+    height: 100%;
+    border-left: solid 2px white;
+    border-right: solid 2px white;
+    border-bottom: solid 2px white;
+    cursor: pointer;
+    border-radius: 0 0 10px 10px;
+}

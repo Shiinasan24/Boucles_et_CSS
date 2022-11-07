@@ -1,18 +1,277 @@
-// -------------- HEADER -------------- //
+// =============================================================
+// ===================       HEADER       ======================
+// =============================================================
+
+main {
+    height: 100vh;    
+    overflow: hidden;
+}
+
+.mainReduced {
+    animation: mainHeight 1.5s forwards;
+}
+@keyframes mainHeight {
+    from {
+        height: 100vh;
+    }
+    to {
+        height: 80vh;
+    }
+}
+
+@keyframes headerInFromTop {
+    from {
+        height: 0;
+    }
+    to {
+        height: 20vh;
+    }
+}
+
+@keyframes headerDivsIn {
+    from {
+        transform: translateY(-100%);
+    }
+    to {
+        transform: translateY(0%);
+    }
+}
+
+.sideDivsIn {
+    animation: headerDivsIn 1s forwards;
+}
+
+// =============================================================
+// ===================       MAIN       ========================
+// =============================================================
+
+// ============ SIDEBARS ============ 
+// ========== (containers) ========== 
+
+.containerMain {
+    display: flex;
+    padding: 1rem 0;
+    height: 100%;
+
+    &__sidebar {
+              
+        &__sidebarLeft {
+            background-color: bisque;
+            border: solid 2px;
+        }
+
+        &__sidebarRight {
+            background-color: bisque;
+            border: solid 2px;
+        }
+
+        &__content {
+            width: 100%;
+            height: 45%;
+            background-color: rgb(179, 0, 0);
+            border: solid 2px white;
+            cursor: pointer;
+        }   
+    }
+}
+
+.articlesLeftTop {
+    border-radius: 0 10px 10px 0;
+    animation: ArticleFromOutInLeft 1s forwards;
+}
+.articlesLeftBottom {
+    border-radius: 0 10px 10px 0;
+    animation: ArticleFromOutInLeft 1.3s forwards;
+}
+
+.articlesRightTop {
+    border-radius: 10px 0 0 10px;
+    animation: ArticleFromOutInRight 1s forwards;
+}
+.articlesRightBottom {
+    border-radius: 10px 0 0 10px;
+    animation: ArticleFromOutInRight 1.3s forwards;
+}
 
 
+#sidebarLeft {
+    @include flexColumn($jC:space-between);
+    padding: 2vh 1vh;
+}
+
+#sidebarRight {
+    @include flexColumn($jC:space-between);
+    padding: 2vh 1vh;
+}
+
+// ----- Animation In-Out of sidebars -----
+
+.animationfromOutIn {
+    animation: fromOutIn .5s forwards;
+}
+
+.animationfromInOut {
+    animation: fromInOut .5s forwards;
+}
+
+@keyframes fromOutIn {
+    from {
+        width: 0;
+    }
+    to {
+        width: 20%;
+    }
+}
+@keyframes ArticleFromOutInLeft {
+    from {
+        transform: translateX(-100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+@keyframes fromInOut {
+    from {
+        width: 20%;
+    }
+    to {
+        width: 0;
+    }
+}
+@keyframes ArticleFromOutInRight {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+// ============ SIDEBARS ============ 
+// =========== (contents) =========== 
+@keyframes rotateScaleForRightSide {
+    from {
+        border-radius: 0;
+    }
+    to {
+        border-radius: 50%;
+        translate: -25%;
+        transform: scale(1.2);
+        rotate: -90deg;
+        z-index: 500;
+    }
+}
+
+@keyframes rotateScaleForRightSideReversed {
+    from {
+        border-radius: 0%;
+        translate: 40vw 60%;
+        transform: scale(2.5);
+        rotate: 90deg;
+        z-index: 500;
+    }
+    to {
+        border-radius: 0%;
+        translate: 0%;
+        transform: scale(1);
+        rotate: 0deg;
+        z-index: 500;
+    }
+}
+
+@keyframes rotateScaleForLeftSide {
+    from {
+        border-radius: 0;
+    }
+    to {
+        border-radius: 50%;
+        translate: 25%;
+        transform: scale(1.2);
+        rotate: 90deg;
+        z-index: 500;
+    }
+}
+
+@keyframes rotateScaleForLeftSideReversed {
+    from {
+        border-radius: 50%;
+        translate: 25%;
+        transform: scale(1.2);
+        rotate: 90deg;
+        z-index: 500;
+    }
+    to {
+        border-radius: 0%;
+        translate: 0%;
+        transform: scale(1);
+        rotate: 0deg;
+        z-index: 500;
+    }
+}
+
+@keyframes scaleForLeftSide {
+    from {
+        border-radius: 50%;
+        translate: 25%;
+        transform: scale(1.2);
+        rotate: 90deg;
+        z-index: 500;
+    }
+    to {
+        border-radius: 0%;
+        translate: 40vw 60%;
+        transform: scale(2.5);
+        rotate: 90deg;
+        z-index: 500;
+    }
+}
+
+.articleLeftTopIn {
+    animation: animationfromOutIn .5s forwards;
+}
+.articleLeftTop {
+    animation: rotateScaleForLeftSide .8s forwards;
+}
+.articleLeftTopScale {
+    animation: scaleForLeftSide .8s forwards;
+}
+.articleLeftTopReverse {
+    animation: rotateScaleForLeftSideReversed .8s forwards;
+}
 
 
-
-// -------------- MAIN -------------- //
-
-// --- Left Sidebar --- //
-
-
-
-// --- Center --- //
+.articleLeftBottom {
+    animation: rotateScaleForLeftSide .8s forwards;
+}
+.articleLeftBottomReverse {
+    animation: rotateScaleForLeftSideReversed .8s forwards;
+}
 
 
+.articleRightTop {
+   animation: rotateScaleForRightSide .8s forwards;
+}
+.articleRightTopReverse {
+   animation: rotateScaleForRightSideReversed .8s forwards;
+}
 
-// --- Right Sidebar --- //
 
+.articleRightBottom {
+    animation: rotateScaleForRightSide .8s forwards;
+}
+.articleRightBottomReverse {
+    animation: rotateScaleForRightSideReversed .8s forwards;
+}
+
+
+// ============ Center ============ 
+.centerContainer {
+    @include flexColumn;
+    margin: 0 1rem;
+    width: 100%;
+    height: 100%;
+    background-color: rgb(210, 210, 210);
+    border: solid 2px;
+    
+}
