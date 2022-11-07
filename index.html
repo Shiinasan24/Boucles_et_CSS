@@ -15,24 +15,25 @@
 	<meta name="keywords" content="liste de mots cles séparés par une virgule">
 </head>
 <body>
-	<header>
-		<aside id="leftHeader">
+	<header class="hide">
+		<aside id="leftHeader" class="hide">
 			<div class="leftHeader__blockLogo">
 				<img src="" alt="" class="logo">
 			</div>
-			<a href="" class="leftHeader__menuButton">Menu -></a>
+			<a href="" class="leftHeader__menuButton"></a>
 
 		</aside>
-		<div class="centerHeader">
+		<div class="centerHeader hide">
 
 
 		</div>
-		<aside id="rightHeader">
+		<aside id="rightHeader" class="hide">
 
 		</aside>
 	</header>
 
 	<main>
+
 		<aside class="navbar">
 			<nav class="menu" role="menu">
 				<ul class="menu__group" role="group">
@@ -44,19 +45,40 @@
 				</ul>
 			</nav>
 		</aside>
-		<aside id="leftSidebar">
+		
+		<div class="containerMain">
+			
+			<aside class="containerMain__sidebar__sidebarLeft hide" id="sidebarLeft">
 
-		</aside>
-		<div class="centerContainer">
-			<div id="videoContainer">
+				<article class="" id="articleLeftTop">
+					
+				</article>
+				<article class="" id="articleLeftBottom">
+					
+				</article>
+
+			</aside>
+
+			<div class="centerContainer">
+				<button id="sidebarBtn">Don't Press This Button</button>
+				<div id="videoContainer">
+
+				</div>
 
 			</div>
 
-		</div>
-		<aside id="rightSidebar">
+			<aside class="containerMain__sidebar__sidebarRight hide" id="sidebarRight">
 
-		</aside>
-		
+				<article class="articles" id="articleRightTop">
+						
+				</article>
+
+				<article class="articles" id="articleRightBottom">
+					
+				</article>
+
+			</aside>
+		</div>
 	</main>
 
 	<footer>
