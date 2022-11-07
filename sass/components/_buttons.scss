@@ -1,0 +1,21 @@
+/*  */
+.btn{
+
+    &--bleugirondins{
+        color:#06082c;
+        background-color:#f8116a;
+        &:hover{
+            color:#f8116a;
+            background-color:#06082c;
+        }
+    }
+    &--rosegirondins{
+        color:#f8116a;
+        background-color:#06082c;
+        &:hover{
+            color:#06082c;
+            background-color:#f8116a;
+        }
+    }
+    
+}

@@ -1,0 +1,17 @@
+@use 'sass:math';
+
+@mixin btnCenter{
+display: flex;
+flex-direction: row;
+justify-content: center;
+align-items: center;
+white-space: nowrap;
+}
+
+@mixin flexColumn ($jC:center, $aI:center, $fD:column) {
+    display: flex;
+    justify-content: $jC;
+    align-items: $aI;
+    flex-direction: $fD;
+}
+

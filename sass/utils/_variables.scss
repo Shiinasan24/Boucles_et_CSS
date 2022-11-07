@@ -1,0 +1,11 @@
+@use 'sass:math';
+
+/* Font Awesome */
+//chhemin d'accès relatif FontAwesome icones
+$fa-font-path:"../../assets/fontawesome/webfonts";
+
+/* taille des boutons */
+
+$btnWidth : 400px;
+$btnHeight: 150px;
+
